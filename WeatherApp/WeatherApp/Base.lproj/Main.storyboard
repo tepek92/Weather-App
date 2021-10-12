@@ -1,0 +1,73 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="18122" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="18093"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--View Controller-->
+        <scene sceneID="tne-QT-ifu">
+            <objects>
+                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="WeatherApp" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="fonWeather" translatesAutoresizingMaskIntoConstraints="NO" id="fY6-bq-AhL">
+                                <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                            </imageView>
+                            <searchBar contentMode="redraw" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="bko-3q-JYp">
+                                <rect key="frame" x="0.0" y="44" width="414" height="44"/>
+                                <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMaxY="YES"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </searchBar>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Temperatura" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="30a-Dj-x5Q">
+                                <rect key="frame" x="123" y="430.5" width="168" height="35"/>
+                                <fontDescription key="fontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="30"/>
+                                <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="City" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumScaleFactor="0.5" translatesAutoresizingMaskIntoConstraints="NO" id="Sy8-AC-udA">
+                                <rect key="frame" x="8" y="348.5" width="398" height="58.5"/>
+                                <fontDescription key="fontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="50"/>
+                                <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="Sy8-AC-udA" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="8" id="3Vy-7e-hbE"/>
+                            <constraint firstItem="fY6-bq-AhL" firstAttribute="top" secondItem="8bC-Xf-vdC" secondAttribute="top" id="4bZ-iU-qil"/>
+                            <constraint firstItem="30a-Dj-x5Q" firstAttribute="top" secondItem="Sy8-AC-udA" secondAttribute="bottom" constant="8" id="FPn-QU-rIF"/>
+                            <constraint firstItem="30a-Dj-x5Q" firstAttribute="centerY" secondItem="8bC-Xf-vdC" secondAttribute="centerY" id="IgR-xV-ZBu"/>
+                            <constraint firstItem="fY6-bq-AhL" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="P4i-wL-U5i"/>
+                            <constraint firstItem="30a-Dj-x5Q" firstAttribute="top" secondItem="Sy8-AC-udA" secondAttribute="bottom" constant="23.5" id="UDf-FA-NGC"/>
+                            <constraint firstAttribute="bottom" secondItem="fY6-bq-AhL" secondAttribute="bottom" id="cdT-i1-9k7"/>
+                            <constraint firstItem="30a-Dj-x5Q" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="fEY-7c-Qqx"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="Sy8-AC-udA" secondAttribute="trailing" constant="8" id="l7Y-53-MtA"/>
+                            <constraint firstItem="fY6-bq-AhL" firstAttribute="trailing" secondItem="6Tk-OE-BBY" secondAttribute="trailing" id="nvr-Vb-lqu"/>
+                            <constraint firstItem="Sy8-AC-udA" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="yAp-Pq-9wy"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="cityLable" destination="Sy8-AC-udA" id="cmz-2v-b3s"/>
+                        <outlet property="searchBar" destination="bko-3q-JYp" id="Gzz-dW-lO8"/>
+                        <outlet property="temperatureLable" destination="30a-Dj-x5Q" id="BK2-4j-Z2E"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="18.840579710144929" y="88.392857142857139"/>
+        </scene>
+    </scenes>
+    <resources>
+        <image name="fonWeather" width="1080" height="1920"/>
+        <systemColor name="systemBackgroundColor">
+            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+    </resources>
+</document>
